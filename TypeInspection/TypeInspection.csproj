@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Title>TypeInspection</Title>
+    <Version>$(VersionPrefix)</Version>
+    <Description>Type inspector providing informations about source assembly etc.</Description>
+    <Copyright>(c) 2024 Aargenveldt</Copyright>
+    <Authors>MJ</Authors>
+    <Company>Aargenveldt</Company>
+    <RootNamespace>de.Aargenveldt.SbomTest.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+  </PropertyGroup>
+
+</Project>
