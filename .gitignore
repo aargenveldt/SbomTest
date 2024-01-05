@@ -6,6 +6,10 @@
 *.user
 *.sln.docstates
 
+# SBOM files
+bom.json
+bom.xml
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
