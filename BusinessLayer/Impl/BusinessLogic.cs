@@ -95,7 +95,7 @@ namespace de.Aargenveldt.SbomTest.BusinessLayer.Impl
 
                 typeof(Snowflake.Data.Core.FastParser),
 
-                typeof(log4net.Core.ILogger)
+                typeof(Serilog.Core.Logger)
             };
 
             IList<AssemblyInfo> assemblyInfos = this._assemblyInfoProvider?.GetAssemblyInfos(electedTypes);

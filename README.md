@@ -68,13 +68,15 @@ Hinweise zu Versionen, Sicherheitsproblemen etc. beziehen sich auf diesen Sticht
     
     
     
-  * ```log4net```v1.2.15.0
+  * ```Serilog```v2.11.0
 
     ⚠ Diese Version ist veraltet.
 
     ⛔ Diese Bibliothek ist **direkt** referenziert (aus ```..\lib\log4net.dll```) - **nicht via NuGet**!!!
 
     Da diese Komponente direkt referenziert wird, wird sie von den SBOM Generatoren (z.B. CycloneDX) im Regelfall ignoriert. D.h., dass diese Komponente **nicht in einer generierten SBOM erscheint!!!**
+
+    Kurioses am Rande: Ursprgl. war ```log4net```v1.2.15.0 direkt referenziert, um diesen Testfall abzudecken... Aber ```Snowflake.Data``` hat eine Referenz auf ```log4net```v2.0.12 eingeschleppt - und die hat das Buildsystem nachhaltig verwirrt: Die Referenz auf ```log4net```v1.2.15.0 konnte nicht mehr aufgelöst und die Solution deshalb nicht mehr erstellt werden... Gleichzeitig konnte keine Referenz auf ```log4net```v1.2.15.0 mehr explizit gesetzt werden, da *das Build System diese Referenz bereits automatisch erstellt hat* (aka: Via NuGet Abhängigkeit hinter den Kulissen aufgelöst hat).
 
 * SbomTestCLI
 
